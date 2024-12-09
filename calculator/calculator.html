@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="relative" id="mainBox1">
+        <div class="absolute">
+            <img src="./images/sky.jpg" alt="" class="w-[100vw] h-[100vh]">
+        </div>
+        <div class="absolute w-[100vw] h-[100vh] p-5 flex justify-between items-center" id="calculator">
+            <div class=" w-[70vw] h-[90vh] flex flex-col justify-between">
+                <div class="bg-transparent h-[10vh]">
+                    <img src="" alt="">
+                    <p
+                        class="opacity-80 bg-opacity-80 bg-gradient-to-b from-[#0b3d91] via-[#1c1c7d] to-[#0a2457] text-white h-[100%] p-5 text-right rounded-2xl text-lg font-semibold tracking-wider" id="result">
+                        </p>
+                    <img src="" alt="">
+                </div>
+                <div class="bg-purple-500 h-[76vh] grid grid-rows-5 grid-cols-7 bg-transparent gap-5">
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95 col-span-2" id="b1">Isekai Numbers</button>
+                    <!-- <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b2">2</button> -->
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b3" onclick="fact()">x!</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b4" onclick="openBrac()">(</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b5" onclick="closeBrac()">)</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b6" onclick="percent()">%</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b7" onclick="allClear()">AC</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b8" onclick="doRound()">Round</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b9" onclick="doSin()">sin</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b10" onclick="doLn()">ln</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b11" onclick="add7()">7</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b12" onclick="add8()">8</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b13" onclick="add9()">9</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b14" onclick="div()">/</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b15" onclick="addPie()">&#960;</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b16" onclick="doCos()">cos</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b17" onclick="doLog()">log</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b18" onclick="add4()">4</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b19" onclick="add5()">5</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b20" onclick="add6()">6</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b21" onclick="mul()">X</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b22" onclick="addE()">e</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b23" onclick="doTan()">tan</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b24" onclick="root()">&#8730;</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b25" onclick="add1()">1</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b26" onclick="add2()">2</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b27" onclick="add3()">3</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b28" onclick="sub()">-</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b29" onclick="changeEveything()">SWITCH</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b30" onclick="expo()">E<sup>x</sup></button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b31" onclick="power()">x<sup>y</sup></button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b32" onclick="add0()">0</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b33" onclick="point()">.</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b34" onclick="equals()">=</button>
+                    <button class="bg-[#191970] text-gray-200 bg-opacity-80 rounded-2xl text-xl font-semibold hover:shadow-animedo transition-shadow hover:bg-opacity-95" id="b35" onclick="add()">+</button>
+                </div>
+            </div>
+            <div class=" w-[25vw] h-[90vh]">
+                <div class="bg-gradient-to-r from-[#1e3a8a] text-white to-[#301934] opacity-80 rounded-3xl h-[100%] py-10 px-5 text-right overflow-y-scroll" id="history">
+                    <p class="font-medium text-2xl text-right">History</p>
+                    <!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, alias perspiciatis? Eaque illo eligendi atque consequuntur cum quia exercitationem optio ea ipsa expedita, alias, iste quod dolores culpa pariatur libero minima, autem tempora sed ut? Nulla tempore, repudiandae facilis velit deserunt facere modi soluta ducimus, commodi ipsum aperiam eos dolores itaque. Fugit veritatis explicabo accusantium asperiores, assumenda ducimus fugiat! Porro alias in quia deserunt. Saepe voluptates officiis vitae? Expedita, iure porro quod architecto, molestias sed autem dicta eligendi magni corrupti saepe laudantium cumque officiis atque. Soluta accusantium fuga nisi eligendi tempore a commodi, sit sunt! Magnam labore itaque voluptates aspernatur! -->
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mainBox2" class="hidden">
+        <div class="absolute">
+            <img src="./images/sky.jpg" alt="" class="w-[100vw] h-[100vh]">
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+
+</html>

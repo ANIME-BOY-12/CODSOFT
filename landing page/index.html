@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            color: hsl(201, 11%, 66%);
+            font-family: "Bai Jamjuree", sans-serif;
+        }
+
+        .box1 {
+            background-image: url(./images/bg-header-desktop.png);
+            background-size: 100vw;
+            background-repeat: no-repeat;
+            height: 50rem;
+        }
+
+        .logo {
+            color: hsl(171, 66%, 44%);
+            font-size: 160px;
+            display: flex;
+            justify-content: center;
+            padding-top: 5rem;
+        }
+
+        .pen {
+            width: 80px;
+        }
+
+        .box2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .box2 h1 {
+            padding-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: hsl(210, 10%, 33%);
+
+        }
+
+        .edit1 {
+            width: 760px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .box3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2.5rem auto;
+        }
+
+        .b1 {
+            background-color: hsl(171, 66%, 44%);
+            width: 13rem;
+            height: 3rem;
+            border-radius: 2rem;
+            margin: auto 0.8rem;
+            box-shadow: 0px 0px 10px hsl(171, 62%, 36%);
+            color: white;
+            cursor: pointer;
+        }
+
+        .b1:hover {
+            box-shadow: 8px 9px 33px hsl(171, 81%, 26%);
+            transition: box-shadow 0.5s linear 0.2s;
+        }
+
+        .b2 {
+            background-color: hsl(233, 100%, 69%);
+            width: 13rem;
+            height: 3rem;
+            border-radius: 2rem;
+            margin: auto 0.8rem;
+            box-shadow: 0px 0px 10px hsl(233, 100%, 69%);
+            color: white;
+            cursor: pointer;
+        }
+
+        .b2:hover {
+            box-shadow: 8px 9px 33px hsl(233, 100%, 69%);
+            transition: box-shadow 0.5s linear 0.2s;
+        }
+
+        .box4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 20px;
+            max-width: 60vw;
+            margin-inline: auto;
+        }
+
+        .head {
+            font-size: 2.3rem;
+            color: hsl(210, 10%, 33%);
+            padding-top: 3.8rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .edit2 {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .box5 {
+            display: grid;
+            grid-template-columns: 55% 40%;
+            grid-auto-rows: 10vh 20vh 20vh 20vh 10vh;
+            column-gap: 4vw;
+            line-height: 23px;
+        }
+
+        .comp {
+            width: 50vw;
+            height: 35vw;
+            grid-row-start: 1;
+            grid-row-end: 6;
+        }
+
+        .box5 h2 {
+            color: hsl(210, 10%, 33%);
+            line-height: 31px;
+        }
+
+        .a1 {
+            grid-row-start: 2;
+            grid-row-end: 3;
+        }
+
+        .a2 {
+            grid-row-start: 3;
+            grid-row-end: 4;
+        }
+
+        .a3 {
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+        .box6 {
+            padding-top: 30px;
+        }
+
+        .notAbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 90px;
+        }
+
+        .notAbox img {
+            width: 53vw;
+            /* height: 35vw; */
+        }
+
+        .box8 {
+            /* max-width: 70vw; */
+            display: flex;
+            justify-content: center;
+        }
+
+        .a4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 75px 20px;
+        }
+
+        .head2 {
+            font-size: 1.3rem;
+            color: hsl(210, 10%, 33%);
+            padding: 40px;
+            padding-bottom: 0.7rem;
+        }
+
+        .a4 p {
+            line-height: 20px;
+            font-size: 13px;
+        }
+
+        .box9 {
+            display: grid;
+            grid-template-columns: 8vw 18vw 18vw 18vw 18vw 18vw 8vw;
+            margin-top: 20px;
+        }
+
+        .google {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+
+        .pbox {
+            padding: 80px;
+            padding-bottom: 0px;
+        }
+
+        footer {
+            display: grid;
+            grid-template-columns: 4vw 150px 100px 130px 100px 40vw 15vw;
+            background-color: hsla(210, 46%, 95%, 0.938);
+            padding-top: 35px;
+            padding-bottom: 25px;
+        }
+
+        .logo1 {
+            font-size: 60px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            color: hsl(171, 66%, 44%);
+
+        }
+
+        .logo2 {
+            grid-column-start: 7;
+            grid-column-end: 8;
+            /* display: flex; */
+            padding-top: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 18px;
+            gap: 24px;
+        }
+
+        .edit4 {
+            line-height: 40px;
+        }
+
+        .pen1{
+            width: 50px;
+        }
+
+        @media (width < 755px) {
+            .box1 {
+                height: auto;
+                margin-bottom: 50px;
+            }
+
+            .box2 h1 {
+                text-align: center;
+            }
+
+            .edit1 {
+                width: 92%;
+            }
+
+            .head {
+                text-align: center;
+            }
+
+            .box5 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                /* flex-wrap: wrap; */
+            }
+
+            .box5 img {
+                width: 90%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .box5 article {
+                margin-block: 20px;
+            }
+
+            .box6 {
+                text-align: center;
+            }
+
+            .edit3 {
+                padding: 20px;
+            }
+
+            .notAbox {
+                width: 100%;
+            }
+
+            .notAbox img {
+                width: 100%;
+            }
+
+            .box8 {
+                flex-wrap: wrap;
+            }
+
+            .a4 {
+                padding: 40px 15px;
+            }
+
+            .p2 {
+                text-align: center;
+            }
+
+            .head {
+                padding: 20px;
+            }
+
+            .edit3 {
+                text-align: center;
+            }
+
+            .box4 {
+                margin-bottom: 40px;
+            }
+
+            .box9 {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .box9 article {
+                text-align: center;
+                padding: 25px;
+            }
+
+            .box9 img {
+                width: 40%;
+            }
+
+            .pbox {
+                padding: 20px;
+                margin-top: 60px;
+            }
+
+            footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .logo2 {
+                display: flex;
+                column-gap: 30px;
+            }
+        }
+
+        @media (width < 425) {
+            .box9 img {
+                width: 60%;
+            }
+        }
+        .logo4{
+            width: 40px;
+        }
+        .logo4:hover{
+            width: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="box1">
+        <div class="logo">
+            <img src="./images/pen.svg" class="pen" alt="">
+        </div>
+        <div class="box2">
+            <h1>A history of everything you copy</h1>
+            <div class="edit1">
+                ClipPen allows you to track and organise everything you copy . Instantly
+                aceess your clipPen on all your devices.
+            </div>
+        </div>
+        <div class="box3">
+            <button class="b1">Download for IOS</button>
+            <button class="b2">Download for MAC</button>
+        </div>
+        <div class="box4">
+            <h2 class="head">Keep track of your snippets</h2>
+            <div class="edit2">
+                ClipPen instanty store any item you copy in the cloud ,meaning you can access
+                your snippet immediatly on all your devices. our MAC and IOS support will help you
+                organize everything
+            </div>
+        </div>
+    </header>
+    <section class="box5">
+        <img src="./images/image-computer.png" alt="computer image" class="comp">
+        <article class="a1">
+            <h2> Quick search</h2>
+            <span>Easily search your snippet by content ,</span> <br>
+            <span> cateogary , web application , application and more.</span>
+        </article>
+        <article class="a2">
+            <h2>iCloud sync</h2>
+            <span>Instantly save and sync your snippet accross all </span><br>
+            <span>your devices</span>
+        </article>
+        <article class="a3">
+            <h2>Complete History</h2>
+            <span>Retrieve any snippet from the first moment you</span><br>
+            <span> started using the app</span>
+        </article>
+    </section>
+    <section class="box6">
+        <div class="box4">
+            <h2 class="head">Acces clipPen anywhere</h2>
+            <div class="edit3">
+                Weather you are on the go or on your computer ,you can access all your clipboard
+                snippets in a few clicks.
+            </div>
+        </div>
+    </section>
+    <section class="notAbox">
+        <img src="./images/image-devices.png" alt="">
+    </section>
+    <section class="box7">
+        <div class="box4">
+            <h2 class="head">Supercharge your workflow</h2>
+            <p class="p2">We have got the tool to boast your productivity</p>
+        </div>
+        <div class="box8">
+            <article class="a4">
+                <img src="./images/icon-blacklist.svg" alt="">
+                <h3 class="head head2">Create blacklists</h3>
+                <div class="edit3">
+                    Ensure sensitive information never makes its
+                    way into your clipPen by excluding several
+                    source
+                </div>
+            </article>
+            <article class="a4">
+                <img src="./images/icon-text.svg" alt="">
+                <h3 class="head head2">Plain text snippets</h3>
+                <div class="edit3">
+                    Remove unwanted formatting from coppied text
+                    for a consistant look
+                </div>
+            </article>
+            <article class="a4">
+                <img src="./images/icon-preview.svg" alt="">
+                <h3 class="head head2">Sneak peak</h3>
+                <div class="edit3">
+                    Quick preview of all your snippets on your clipboard
+                    for easy access
+                </div>
+            </article>
+        </div>
+        <div class="box9">
+            <article class="google"> <img src="./images/logo-google.png" alt=""
+                    width="65%"></article>
+            <article><img src="./images/logo-ibm.png" alt="" width="65%"></article>
+            <article><img src="./images/logo-microsoft.png" alt="" width="65%"></article>
+            <article><img src="./images/logo-hp.png" alt="" width="65%"></article>
+            <article><img src="./images/logo-vector-graphics.png" alt="" width="65%">
+            </article>
+        </div>
+        <div class="box4 pbox">
+            <h2 class="head">ClipPen for MAC OS and IOS</h2>
+            <p class="p2">Avilable for download free on play store to download and try, download </p>
+            <p class="p2">on your pc or mobile ,link to google account and use easily</p>
+        </div>
+        <div class="box3">
+            <button class="b1">Download for IOS</button>
+            <button class="b2">Download for MAC</button>
+        </div>
+    </section>
+    <footer class="end">
+        <div class="logo1"> <img src="./images/pen.svg" class="pen1" alt=""></div>
+        <div class="details">
+            <div class="edit4">FAQs</div>
+            <div class="edit4">Contact us</div>
+        </div>
+        <div class="details">
+            <div class="edit4">Privacy policy</div>
+            <div class="edit4">Press kit</div>
+        </div>
+        <div class="details">
+            <div class="edit4">Install guide</div>
+        </div>
+        <div class="logo2">
+            <img src="./images/icon-facebook.svg" class="logo4" alt="">
+            <img src="images/icon-twitter.svg" class="logo4" alt="">
+            <img src="./images/icon-instagram.svg" class="logo4" alt="">
+        </div>
+    </footer>
+</body>
+
+</html>
