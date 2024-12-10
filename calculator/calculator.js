@@ -251,6 +251,12 @@ let equals = ()=>{
     }
 }
 
+
+
+let mb1 = document.getElementById("mainBox1")
+let mb2 = document.getElementById("mainBox2")
 let changeEverything = ()=>{
-    
+    if(mb2.classList.contains("hidden")){
+        mb2.classList.add("")
+    }
 }
